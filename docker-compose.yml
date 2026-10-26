@@ -1,18 +1,14 @@
-version: '3.8'
-
 services:
   airflow-spark:
     build:
       context: .
       dockerfile: Dockerfile
-    image: sde-decourse-airflow-spark
-    container_name: airflow-spark
     ports:
-      - "8080:8080"   # Airflow webserver
-      - "4040:4040"   # Spark UI
-      - "8888:8888"   # Jupyter Lab
-      - "8081:8081"   # dbt docs
-      - "4778:4778"   # IGNORE, this is for de101.startdataengineering.com
+      - "8080:8080" # Airflow webserver
+      - "4040:4040" # Spark UI
+      - "8888:8888" # Jupyter Lab
+      - "8081:8081" # dbt docs
+      - "4778:4778" # IGNORE, this is for de101.startdataengineering.com
     volumes:
       - ./airflow/dags:/home/airflow/dags
       - ./airflow/tpch_analytics:/home/airflow/tpch_analytics
