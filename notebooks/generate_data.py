@@ -1,7 +1,8 @@
 import argparse
-import duckdb
-import os
 import logging
+import os
+
+import duckdb
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"

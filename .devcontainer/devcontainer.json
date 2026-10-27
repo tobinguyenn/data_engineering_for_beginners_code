@@ -1,0 +1,15 @@
+{
+  "name": "sde-airflow-spark",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "airflow-spark",
+  "workspaceFolder": "/home/airflow",
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/home/airflow/.venv/bin/python"
+      },
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter", "charliermarsh.ruff"]
+    }
+  }
+}

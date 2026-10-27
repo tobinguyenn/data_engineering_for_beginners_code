@@ -1,6 +1,5 @@
-from pyspark.sql import SparkSession
 import plotly.express as px
-import os
+from pyspark.sql import SparkSession
 
 spark = (
     SparkSession.builder.appName("sample")

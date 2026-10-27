@@ -1,7 +1,7 @@
-from pyspark.sql import SparkSession
-from pathlib import Path
 import logging
+from pathlib import Path
 
+from pyspark.sql import SparkSession
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -157,7 +157,7 @@ TBLPROPERTIES (
 
 def upsert_data(data_name, data_path=Path("/home/airflow/notebooks/data")):
     csv_path = data_path / f"{data_name}.csv"
-    logger.info(f"Reading {data_name} data from {str(csv_path)}")
+    logger.info(f"Reading {data_name} data from {csv_path!s}")
     df = (
         spark.read.format("csv")
         .option("header", "true")

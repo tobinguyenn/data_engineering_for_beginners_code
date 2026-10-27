@@ -236,3 +236,6 @@ spark-warehouse/
 book/
 
 /metastore_db/
+
+.DS_STORE
+airflow/tpch_analytics/dashboard_plot.html
